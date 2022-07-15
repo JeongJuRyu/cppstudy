@@ -20,12 +20,21 @@ public:
 	}
 private:
 	int m_i;
-	int m_f;
+	float m_f;
 	
 public:
 	void SetInt(int i)
 	{
 		this->m_i = i;
+		this->m_f = 1.04f;
+	}
+
+	CMy& operator =(const CMy& _other)
+	{
+		this->m_i = _Other.m_i;
+		this->m_f = _Other.m_f;
+		
+		return *this;
 	}
 };
 int main()
@@ -51,4 +60,6 @@ int main()
 
 	CMy c3;
 	c3.SetInt(1000);
+
+	c3 = c2;
 }

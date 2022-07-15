@@ -16,6 +16,9 @@
     <Filter Include="LinkedList">
       <UniqueIdentifier>{653db01e-cae4-4920-a854-5435791795ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Array">
+      <UniqueIdentifier>{dde72566-306c-4d66-8f51-a6d7ad8f0a4b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LinkedList.cpp">
@@ -27,10 +30,16 @@
     <ClCompile Include="main0601.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="main0602.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LinkedList.h">
       <Filter>LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="CArr.h">
+      <Filter>Array</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
