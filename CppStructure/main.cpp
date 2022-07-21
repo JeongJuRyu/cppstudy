@@ -40,7 +40,7 @@ public:
 };
 int main()
 {
-	vector<int> vecInt;
+	/*vector<int> vecInt;
 	CArr<int> myvector;
 	myvector.push_back(1);
 	myvector.push_back(2);
@@ -64,16 +64,40 @@ int main()
 	veciter = vecInt.begin();
 	for (; veciter != vecInt.end();)
 	{
-		if (1 <= *veciter && 5 >= *veciter)
+		if (*veciter % 2 == 0)
 		{
 			veciter = vecInt.erase(veciter);
 		}
-		else veciter++;
+		else
+		{
+			veciter++;
+		}
 	}
 	for (int i = 0; i < vecInt.size(); i++)
 	{
 		cout << vecInt[i] << endl;
+	}*/
+
+	// ===================
+	// list iterator test
+	// ===================
+
+	
+	CList<int> mylist;
+
+	mylist.push_back(100);
+	mylist.push_back(300);
+	mylist.push_back(400);
+
+	CList<int>::iterator listiter = mylist.begin();
+	++listiter;
+	mylist.insert(listiter, 200);
+	for (listiter = mylist.begin(); listiter != mylist.end(); ++listiter)
+	{
+		cout << *listiter << endl;
 	}
+
+	
 	return 0;
 
 }
