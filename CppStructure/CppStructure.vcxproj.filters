@@ -41,5 +41,11 @@
     <ClInclude Include="CArr.h">
       <Filter>Array</Filter>
     </ClInclude>
+    <ClInclude Include="CList.h">
+      <Filter>LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="CArrPractice.h">
+      <Filter>Array</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

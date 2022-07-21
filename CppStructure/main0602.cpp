@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 
 #include "CArr.h"
 using namespace std;
@@ -12,6 +12,9 @@ public:
 		:a(10)
 	{
 
+	}
+	CTest::~CTest()
+	{
 	}
 };
 template<typename T>
@@ -51,4 +54,4 @@ int main()
 	int i = Add<int>(2, 3);
 	//Å×½ºÆ®
 	return 0;
-}
+}*/
