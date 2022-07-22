@@ -18,7 +18,6 @@ namespace MYSPACE
 void MyEndL()
 {
 	wprintf(L"\n");
-
 }
 class CMyOStream
 {
