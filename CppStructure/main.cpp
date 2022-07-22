@@ -96,7 +96,6 @@ int main()
 		cout << *listiter << endl;
 	}
 
-	
 	return 0;
 
 }
