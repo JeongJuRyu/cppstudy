@@ -1,2 +1,2 @@
 ﻿  main_0721.cpp
-  CppStructure.vcxproj -> C:\Users\totw2\source\repos\CppStructure\x64\Debug\CppStructure.exe
+C:\Users\totw2\source\repos\CppStructure\CppStructure\CBST.h(95): error C4716: 'CBST<int,int>::iterator::operator++': 값을 반환해야 합니다.

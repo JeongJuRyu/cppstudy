@@ -4,13 +4,13 @@
 
 #include <string>
 
+#include "CBST.h"
+
 using std::map;
 using std::make_pair;
 using std::set;
 
 using std::wstring;
-#define MAN 1
-#define WOMAN 2
 
 using std::wcout;
 using std::endl;
@@ -68,36 +68,6 @@ int main()
 	const wchar_t* pStr = L"문자열";
 	wchar_t szArr[100] = L"abdef";
 
-	map<const wchar_t* , tStdInfo> mapData;
-
-	tStdInfo info(L"홍길동", 18, MAN);
-	tStdInfo info2(L"이지혜", 25, WOMAN);
-	
-	mapData.insert(make_pair(L"홍길동", info));
-	mapData.insert(make_pair(L"이지혜", info2));
-	// 주소값으로 비교를 하기 때문에, 문자열 사전순으로 관리하지는 않는다.
-	map<const wchar_t*, tStdInfo>::iterator mapiter = mapData.find(L"이지혜");
-	
-	_wsetlocale(LC_ALL, L"korean");
-	if (mapiter == mapData.end())
-	{
-		wcout << L"데이터를 찾을 수 없다." << endl;
-	}
-	else
-	{
-		wcout << L"이름 : " << mapiter->second.szName << endl;
-		wcout << L"나이 : " << mapiter->second.age << endl;
-		wcout << L"성별 : ";
-		if (MAN == mapiter->second.gender)
-		{
-			wcout << L"남자" << endl;
-		}
-		else if (WOMAN == mapiter->second.gender)
-		{
-			wcout << L"여자" << endl;
-		}
-		
-	}
 	
 	map<MyClass, tStdInfo> mapStdInfo;
 	mapStdInfo.insert(make_pair(MyClass(), tStdInfo()));
@@ -106,8 +76,33 @@ int main()
 	// 직접 동적 할당한 영역에서 문자열을 관리한다.
 	wstring str;
 	str = L"abcdef";
-	str += L"hijk";
-	str += L"lmnop";
-	str[1] = L'c';
+
+	CBST<int, int> bstint;
+
+	bstint.insert(make_bstpair(100,0));
+	bstint.insert(make_bstpair(150, 0));
+	bstint.insert(make_bstpair(50, 0));
+	
+	CBST<int, int>::iterator Iter = bstint.begin();
+	
+	Iter = bstint.find(50);
+
+	tPair<int, int> pair;
+
+	tPair<int, int>* pPair = &pair;
+	for (Iter = bstint.begin(); Iter != bstint.end(); ++Iter)
+	{
+		wcout << Iter->first << Iter->second << endl;
+	}
+	
+
+
+
+
+	map<int, int> mapInt;
+	mapInt.insert(make_pair(100, 100));
+
+	map<int, int>::iterator iter = mapInt.find(100);
+
 	return 0;
 }

@@ -142,6 +142,7 @@
   <ItemGroup>
     <ClInclude Include="CArr.h" />
     <ClInclude Include="CArrPractice.h" />
+    <ClInclude Include="CBST.h" />
     <ClInclude Include="CList.h" />
     <ClInclude Include="LinkedList.h" />
   </ItemGroup>
